@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D3S3RT3UR</title>
+
+<style>
+body {
+    background-image: url("bd.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(0,0,0,0.35);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+.header-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.subtitle {
+    opacity: 0.8;
+}
+
+/* PROFILE AVATAR (header) */
+.profile {
+    position: relative;
+}
+
+.profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.6);
+}
+
+/* MAIN */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* SECTIONS */
+section {
+    background: rgba(255,255,255,0.07);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* PROFIL CARD */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.6);
+}
+
+.profile-info h2 {
+    margin: 0;
+}
+
+.profile-links a {
+    margin-right: 1rem;
+    color: #00ffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.profile-links a:hover {
+    text-decoration: underline;
+}
+
+/* DETAILS / ACCORDION */
+details {
+    margin-top: 1rem;
+    background: rgba(0,0,0,0.25);
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-left">
+        <h1>D3S3RT3UR</h1>
+        <div class="profile">
+            <img src="pdp.jpg" alt="Photo de profil">
+        </div>
+    </div>
+    <p class="subtitle">write up</p>
+</header>
+
+<main>
+
+<!-- PROFIL -->
+<section>
+    <div class="profile-card">
+        <img src="pdp.jpg" alt="Photo de profil">
+
+        <div class="profile-info">
+            <h2>D3S3RT3UR</h2>
+            <p>CTF player • Reverse • Malware</p>
+
+            <div class="profile-links">
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WRITE UPS -->
+<section>
+    <h2>Write-ups CTF</h2>
+
+    <details>
+        <summary>Malware</summary>
+        <p>
+            Analyse du malware<br>
+            • Static analysis<br>
+            • Dynamic analysis<br>
+            • IOC / conclusion
+        </p>
+    </details>
+
+    <details>
+        <summary>Reverse</summary>
+        <p>
+            Reverse engineering du binaire<br>
+            • Ghidra<br>
+            • Patching<br>
+            • Flag
+        </p>
+    </details>
+
+</section>
+
+</main>
+
+</body>
+</html>
